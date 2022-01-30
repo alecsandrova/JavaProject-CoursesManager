@@ -35,7 +35,10 @@ public class LoginForm {
                         Application.getInstance().addUser(new User(txtFirstName.getText(), txtLastName.getText(), txtUsername.getText(), new String(txtPassword.getPassword()), type ));
                         JOptionPane.showMessageDialog(null, "Added successfully!");
                         mainPanel.setVisible(false);
-                        owner.setContentPane(new TeacherForm(owner).getPanel1());
+                        if(Application.getInstance().currentUser.accountType.equals(UserAccountType.TEACHER)) {
+                            owner.setContentPane(new TeacherForm(owner).getPanel1());
+                        }
+                        else owner.setContentPane(new StudentForm(owner).getPanel1());
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
@@ -50,14 +53,12 @@ public class LoginForm {
             public void actionPerformed(ActionEvent e) {
                 if ( e.getSource() == iDonTHaveButton) {
                     System.out.println("idonthavebutton");
-
+                    iDonTHaveButton.setVisible(false);
                     Name1Panel.setVisible(true);
                     Name2Panel.setVisible(true);
                     TypePanel.setVisible(true);
                     btnNew.setVisible(true);
                 }
-
-
             }
         });
     }
@@ -85,4 +86,6 @@ public class LoginForm {
     private JPanel Name2Panel;
     private JPanel TypePanel;
     private JFrame owner;
+
+
 }

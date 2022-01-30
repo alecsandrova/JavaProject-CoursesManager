@@ -18,7 +18,7 @@ public class TestClass {
 		LoginForm loginForm = new LoginForm(frame);
 		frame.setContentPane(loginForm.getMainPanel());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(0,0,500,400);
+		frame.setBounds(0,0,900,500);
 
 		frame.setVisible(true);
 		/* Scanner sc = new Scanner(System.in);

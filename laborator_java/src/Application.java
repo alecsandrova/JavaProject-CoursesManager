@@ -95,6 +95,7 @@ public class Application {
 
     public void addUser(User user) throws  Exception {
         userList.add(user);
+        login(user);
         addLine(user);
 
     }
