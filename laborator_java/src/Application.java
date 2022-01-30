@@ -80,6 +80,10 @@ public class Application {
 
     }
 
+//    public void getCurrentUser() throws Exception {
+//        if (Application.getInstance().currentUser.nireturn Application.getInstance().currentUser;
+//    }
+
     public void login(User user) throws Exception {
         int index = userList.indexOf(user);
         if ( index != -1 ) {

@@ -36,7 +36,6 @@ public class TeacherForm {
                             Object[] lines = br.lines().toArray();
                             modelStudenti.setRowCount(0);
 
-
                                 for (int i = 0; i < lines.length; i++) {
                                     int selectedIndex = tabelCourses.getSelectedRow();
                                     if(selectedIndex != -1) {
@@ -51,10 +50,7 @@ public class TeacherForm {
                     } catch (Exception ex) {
                         System.out.println(ex);
                     }
-                    
                 }
-
-
             }
         });
 
@@ -92,9 +88,7 @@ public class TeacherForm {
 
                 modelCursuri.setColumnIdentifiers(columnsName);
                 Object[] lines = br.lines().toArray();
-
                 modelCursuri.setRowCount(0);
-
 
                 modelStudenti.setColumnIdentifiers(columnsName);
 
@@ -106,8 +100,6 @@ public class TeacherForm {
                     String[] row = lines[i].toString().split(",");
 
                     modelCursuri.addRow(row);
-
-
 
                 }
             }
